@@ -1,0 +1,102 @@
+//nested for loop
+class Main {
+    public static void main(String[] args)
+    {
+        for (int i = 1; i <= 2; i++) 
+        {
+            System.out.println("outer loop " + i);
+            
+        for (int j = 1; j <=3; j++) 
+        {
+            System.out.println( "inner loop" + j);
+        }
+        }
+
+    }
+}
+
+
+
+
+//nested for loop i*j
+class Main {
+    public static void main(String[] args)
+    {
+        for (int i = 1; i <= 2; i++) 
+        {
+            System.out.println("outer loop " + i);
+            
+        for (int j = 1; j <=3; j++) 
+        {
+            System.out.println( i*j);
+        }
+        }
+
+    }
+}
+
+
+//nested for loop user input
+
+class Main {
+    public static void main(String[] args)
+    {
+        for (int i = 1; i <= 2; i++) 
+        {
+            System.out.println("outer loop " + i);
+            
+        for (int j = 1; j <=3; j++) 
+        {
+            System.out.println("inner loop" + i*j);
+        }
+        }
+
+    }
+}
+
+
+//leap year
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args) 
+    {
+        Scanner data= new Scanner(System.in);
+        for (int i = 1; i <= 3; i++)
+        {
+            System.out.print("enter year " + i + ": ");
+            int y = data.nextInt();
+
+            if ((y % 400 == 0) || ((y % 4 == 0) && (y % 100 != 0))) 
+            {
+                System.out.println(y + " is leap year");
+            } else 
+            {
+                System.out.println(y + " is not leap year");
+            }
+        }
+    }
+}
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner data= new Scanner(System.in);
+        System.out.print("enter num");
+        int num = data.nextInt();
+        int j,tem=0;
+        for (j = 2; j <=10; j++)
+        {
+            if(num%j==0)
+            tem = 0 ;
+            break;
+        }
+        if (tem == 1)
+        {
+            System.out.println("prime num");
+        } 
+        else 
+        {
+            System.out.println("not prime num");
+        }
+    }
+}
