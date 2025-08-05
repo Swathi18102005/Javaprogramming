@@ -1,3 +1,14 @@
+//These are used to set up and handle processes that must be
+repeated. The three types of loops are while, do while, and for.
+
+//syntax
+while (boolean_expression)
+{
+ // loop block
+}
+
+
+
 //while
 import java.util.Scanner;
 
