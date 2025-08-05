@@ -1,5 +1,4 @@
-//These are used to set up and handle processes that must be
-repeated. The three types of loops are while, do while, and for.
+//These are used to set up and handle processes that must berepeated. The three types of loops are while, do while, and for.
 
 //syntax
 while (boolean_expression)
