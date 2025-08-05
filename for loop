@@ -1,3 +1,19 @@
+//The while loop and do while loop are useful for many situations, but you must controlthe boolean condition ensuring that the variables change and eventually make the
+condition false
+ If you know how many times you want to iterate, the for loop is probably the best choice
+
+//work flow
+1. The initial condition statement (the 1st portion in parentheses) is executed
+2. The boolean expression (the 2nd portion in parentheses) is tested to see if it is true. 
+If so, the body of the loop is executed if it is false, the for loop is exited.
+3. The iteration statement (the 3rd portion in the parentheses) is executed. Itreturns to Step 2 and continues until the loop is exited.
+
+//syntax
+for (initial_condition; boolean_expression; iteration)
+{
+ // loop block
+}
+
 //forloop
 class Main {
     public static void main(String[] args) {
