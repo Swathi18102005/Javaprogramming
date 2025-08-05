@@ -1,5 +1,4 @@
-//The switch statement allows a choice from a number of options. It will test a number of
-cases against a variable of type char, byte, short, or int.
+//The switch statement allows a choice from a number of options. It will test a number of cases against a variable of type char, byte, short, or int.
 
 //syntax
 switch (variable)
