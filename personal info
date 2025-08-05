@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner data= new Scanner(System.in);
+        String name;
+        System.out.println("name:");
+        name = data.nextLine();
+
+        //char gender;
+       // System.out.println("gender:");
+        //gender = data.next().charAt(1);
+        
+        byte age;
+        System.out.println("age:");
+        age = data.nextByte();
+
+        short spr;
+        System.out.println("spr:");
+        spr = data.nextShort();
+
+        int year;
+        System.out.println("year:");
+        year = data.nextInt();
+
+        long phone;
+        System.out.println("phone num:");
+        phone = data.nextLong();
+
+        float height;
+        System.out.println("height:");
+        height = data.nextFloat();
+
+        double weight;
+        System.out.println("weight:");
+        weight = data.nextDouble();
+        
+        boolean student ;
+        System.out.println("student true/false:");
+        student = data.nextBoolean();
+
+
+    }
+}
