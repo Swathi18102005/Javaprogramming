@@ -1,0 +1,34 @@
+//forloop break
+class Main {
+    public static void main(String[] args) {
+        for (int count = 1; count <= 10; count++)
+        {
+            if (count == 6) 
+            {
+                break; 
+            }
+            System.out.println(count);
+        }
+    }
+}
+
+//forloop using continue
+
+class Main {
+    public static void main(String[] args) {
+        for (int count = 1; count <= 10; count++) {
+            if (count == 6) {
+                continue; 
+            }
+            System.out.println(count);
+        }
+    }
+}
+
+
+
+
+
+
+    
+
