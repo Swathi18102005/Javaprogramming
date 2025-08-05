@@ -1,0 +1,74 @@
+//find area
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+
+        System.out.println("1. Circle");
+        System.out.println("2. Rectangle");
+        System.out.println("3. Square");
+
+        System.out.print("enter your option ");
+        int option = data.nextInt(); 
+
+        double answer; 
+
+        switch (option) {
+            case 1:
+                System.out.print("Enter radius: ");
+                double r = data.nextDouble();
+                answer = 3.14 * r * r;
+                System.out.println("area of circle = " + answer);
+                break;
+
+            case 2:
+                System.out.print("enter length: ");
+                double length = data.nextDouble();
+                System.out.print("enter width: ");
+                double width = data.nextDouble();
+                answer = length * width;
+                System.out.println("Area of Rectangle = " + answer);
+                break;
+
+            case 3:
+                System.out.print("enter side: ");
+                double a = data.nextDouble();
+                answer= a * a;
+                System.out.println("area of square = " + answer);
+                break;
+
+            default:
+                System.out.println("invalid option. choose(1to3)");
+        }
+    }
+}
+
+//print table
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner data = new Scanner(System.in);  
+
+        System.out.print("type number: "); 
+        int table = data.nextInt();           
+
+        System.out.println(" table for num " + table );
+
+        for (int i = 1; i <= 10; i++) 
+        {     
+            int result = table * i;      
+            System.out.println(table+ "*" + i + "=" + result);
+        }
+
+    }
+}
+
+
+
+
+
+
+
