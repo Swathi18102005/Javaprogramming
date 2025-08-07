@@ -1,0 +1,45 @@
+//random number
+import java.util.Scanner;
+
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner data = new Scanner(System.in);
+        System.out.println("enter num");
+        
+        int start = data.nextInt();
+        System.out.println("ender num2");
+        int end = data.nextInt();
+        
+        int random = start + (int)(Math.random() * ((start + end) + 1));
+        
+        System.out.println(random);
+    }
+}
+
+
+//ugly number
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+
+        System.out.print("enter num ");
+        int num = data.nextInt();
+        int user= num;
+        if (num % 2 == 0) {
+           System.out.println( " ugly num");
+        } 
+        else if (num % 3 == 0) {
+           System.out.println( "  ugly num"); 
+        } 
+        else if (num % 5 == 0) {
+            System.out.println( "  ugly num");
+        } 
+        else {
+            System.out.println( " not ugly num");
+        }
+    }
+}
