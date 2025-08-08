@@ -1,0 +1,87 @@
+//method
+class Main {
+public static void mymethod(String  name){
+    System.out.println(name);
+    
+}
+    public static void main(String[] args)
+
+    {
+       mymethod("swathi");
+    }
+}
+
+// number
+class Main {
+public static void mymethod(int x ){
+    System.out.println(x);
+    
+}
+
+    public static void main(String[] args)
+
+    {
+       mymethod(10);
+    }
+}
+
+//two parameter
+class Main {
+public static void mymethod(String  name,String lastname){
+    System.out.println(name +" " +lastname);
+    
+}
+
+    public static void main(String[] args)
+
+    {
+       mymethod("swathi","rajagopal");
+    }
+}
+
+//multiple parameter
+class Main {
+public static void mymethod(String  name,String lastname,int age,double weight){
+    System.out.println(name +" " +lastname+" " +age+" "+weight);
+    
+}
+
+    public static void main(String[] args)
+
+    {
+       mymethod("swathi","rajagopal",10,64.575);
+    }
+}
+//
+
+
+
+//INSTANT METHODS
+class Main {
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.sample();         
+    }
+    
+    public void sample() {
+        int a = 10;
+        System.out.println(a); 
+    }
+}
+
+//sum
+class Sample{
+    public void add() {
+        int x=10; 
+        int y=15;
+        System.out.println(x+y); 
+    }
+}
+    
+ class Main {   
+    public static void main(String[] args){
+        Sample obj=new Sample();
+        obj.add();
+    }
+}
+
