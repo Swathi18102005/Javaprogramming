@@ -1,0 +1,18 @@
+//charat,asci value
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);   
+        System.out.print("enter name: ");
+        String name = data.nextLine();           
+        
+        char x = name.charAt(0);   
+        int y= name.codePointBefore(2);
+        
+        System.out.println( x);
+         System.out.println( y);
+    }
+}
+
+//
