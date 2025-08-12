@@ -129,3 +129,107 @@ class Main {
     }
 }
 
+//getChars()
+class Main {
+    public static void main(String[] args) {
+        char[] a={'1','2','3','4','5','6','7','8','9'};
+     System.out.println(a);
+     String str="hello world";
+     str.getChars(6,11,a,4);
+     System.out.println(a);
+     
+    }
+}
+
+//
+class Main {
+    public static void main(String[] args) {
+        char[] a={'9','0','9','8','1','2','3','4','5','6','7'};
+              
+     String str="swathi";
+     str.getChars(0,6,a,4);
+     System.out.println(a);
+        
+    }
+}
+
+//big name num accepts only single bit
+class Main {
+    public static void main(String[] args) {
+        char[] a={'9','0','9','8','1','2','3','4','5','6','7','8','9','1','2','3'};
+           
+     String str="bhavadharini";
+     str.getChars(0,12,a,4);
+     System.out.println(a);     
+    }
+}
+
+//getbytes()
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi";
+        byte[] array=name.getBytes();
+        System.out.println(array[0]);
+
+
+	}
+}
+
+//hashCode()
+      class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi";
+        System.out.println(name.hashCode());
+
+
+	}
+}
+
+//upper lower case
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi";
+		String myname ="SWATHI";
+              System.out.println(name.toUpperCase());
+              System.out.println(myname.toLowerCase());
+
+
+	}
+}
+
+//indexOf()
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="have a nice day";
+	
+        System.out.println(name.indexOf("day"));
+
+
+	}
+}
+
+//is empty
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="have a nice day";
+		String n ="";
+	
+        System.out.println(name.isEmpty());
+        System.out.println(n.isEmpty());
+
+	}
+}
+
+
+
+
+
+
+
+
+
