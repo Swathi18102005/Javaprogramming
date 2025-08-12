@@ -225,6 +225,31 @@ class Main {
 	}
 }
 
+//join
+class Main {
+	public static void main(String[] args) {
+		
+		String name =String.join(" ","swathi","bhava","san");
+        System.out.println(name);
+  
+
+	}
+}
+//lastindexof,length
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi rajagopal";
+        System.out.println(name.lastIndexOf("rajagopal"));
+        System.out.println(name.length());
+  
+
+	}
+}
+
+
+
+
 
 
 
