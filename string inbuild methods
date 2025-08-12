@@ -52,3 +52,80 @@ class Main {
                 
     }
 }
+
+//contains(),contentEquals()  2
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);   
+        System.out.print("enter name:");
+        String name = data.nextLine();           
+        
+        System.out.println(name.contains("h") );
+        System.out.println(name.contentEquals("hello"));
+    
+    }
+}
+
+//copyValueOf(),endsWith()  2
+
+class Main {
+    public static void main(String[] args) {
+      
+        char[] a = {'S','W','A','T','H','I'};
+        String str = String.copyValueOf(a, 0, 6); 
+        System.out.println(str);
+        System.out.println(str.endsWith("I")); 
+    }
+}
+
+//user input get char and convert string   2
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);   
+        System.out.print("enter no of num ");
+        int n = data.nextInt();
+
+        char[] a = new char[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("enter char " +  ": ");
+            a[i] = data.next().charAt(0);
+        }
+
+        String str = String.copyValueOf(a); 
+        System.out.println(str);
+        System.out.println(str.endsWith("i")); 
+    }
+}
+//format  1
+class Main {
+    public static void main(String[] args) {
+        String data = "swathi";
+        String Hi = "Hi %s my age is %d";
+        System.out.println(data.equalsIgnoreCase("Hello")); 
+       
+         System.out.println(Hi.format(Hi,"swathi",20));
+    }
+}
+
+//user input format  1
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner n = new Scanner(System.in);
+        System.out.print("enter name: ");
+        String str = n.nextLine();
+        
+        System.out.print("enter age: ");
+        int age = n.nextInt();
+
+        String Hi = "Hi %s my age is %d";
+        System.out.println(str.equalsIgnoreCase("Hello"));
+        System.out.println(String.format(Hi, str, age));
+
+    }
+}
+
