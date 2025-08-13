@@ -373,6 +373,34 @@ public class Main {
 }
 
 //char array,lowercase,uppercase,trim,valueof
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner data=new Scanner(System.in);
+	    System.out.println("Enter:");
+	    String x=data.nextLine();
+	    System.out.println(x);
+	   
+	    //toCharArray()
+	    char[] y=x.toCharArray();
+	    for(char c:y){
+	        System.out.println(c);
+	    }
+	    
+	    //toUpperCase()
+	    System.out.println(x.toUpperCase());
+	    //toLowerCase()
+	    System.out.println(x.toLowerCase());
+	    //toString()
+	    String m=x.toString();
+	    System.out.println(m);
+	   
+	   
+
+	}
+}
 //trim,valueof
 import java.util.Scanner;
 
