@@ -187,7 +187,7 @@ class Main {
 	}
 }
 
-//upper lower case
+//upper lower case  2
 class Main {
 	public static void main(String[] args) {
 		
@@ -247,11 +247,104 @@ class Main {
 	}
 }
 
+//matches,regionMatches    2
+public class Main
+{
+	public static void main(String[] args) {
+	    String a="new world";
+	    String b="hello world";
+	    String c="hello|world|java";
+		System.out.println("hello".matches(b));
+		System.out.println("world".matches(c));
+		System.out.println("javascript".matches(c));
+		System.out.println(b.regionMatches(8,a,6,5));
+	}
+}
 
+//replace,replaceAll,replaceFirst    3
+public class Main
+{
+	public static void main(String[] args) {
+	    String x="new world";
+	    String y="hello swathi hello";
+		System.out.println(x.replace('l','p'));
+		String a="(?i)hello";
+		System.out.println(y.replaceAll(a,"hi"));
+		String b="hello";
+		System.out.println(y.replaceFirst(b,"hi"));
+		
+	}
+}
 
+//split
+public class Main
+{
+	public static void main(String[] args) {
+	    String x="hello world";
+	    String y="[,\\ .\\s]";
+	    String[]z=x.split(y);
+	    for(String s:z){
+	        		System.out.println(s);
+	    }
+		
+		
+	}
+}
 
+//user input split
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner data= new Scanner(System.in);
 
+        System.out.print("enter a sentence: ");
+        String x = data.nextLine();
+	    String y="[,\\ .\\s]";
+	    String[]z=x.split(y);
+	    for(String s:z){
+	        		System.out.println(s);
+	    }
+		
+		
+	}
+}
 
+//concat,replace ,replaceAll,split userinput
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        System.out.print("enter a sentence: ");
+        String x = data.nextLine();
+
+        System.out.println(x.concat("hello"));
+
+        System.out.println(x.replace('a', 'i'));
+
+        String a = "(?i)hello";
+        System.out.println(x.replaceAll(a, "hi"));
+
+        String y = "[,\\.\\s]";
+        String[] z = x.split(y);
+        for (String s : z) {
+            System.out.println(s);
+        }
+    }
+}
+
+//startsWith()
+public class Main
+
+{
+	public static void main(String[] args) {
+	 String x="Hello";
+	 System.out.println(x.startsWith("Hello"));
+	 System.out.println(x.startsWith("he"));
+		
+	}
+}
 
 
 
