@@ -346,6 +346,49 @@ public class Main
 	}
 }
 
+//subString,sunSequence,concat
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter name : ");
+        String x = data.nextLine(); 
+        
+        System.out.println(x);
+        
+        String a = x.substring(0, 6);
+        System.out.println(a);
+        
+        String b = x.substring(6, 15);
+        System.out.println(b);
+        
+        System.out.println(x.subSequence(6, 15));
+        
+        String n = a.concat(" " + b);
+        System.out.println(n);c
+        
+    }
+}
+
+//char array,lowercase,uppercase,trim,valueof
+//trim,valueof
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter name : ");
+        String x = data.nextLine(); 
+        
+        System.out.println(x);
+        System.out.println(x.trim());
+         System.out.println(String.valueOf(x));
+    }
+}
+
 
 
 
