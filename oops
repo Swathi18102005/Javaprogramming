@@ -29,3 +29,115 @@ class person{
             System.out.println(p.toString());
         }
 }
+
+//inheritance
+// Parent class
+class Cars {
+    void sound() {
+        System.out.println("Cars make a sound");
+    }
+}
+
+// Child class
+class BMW extends Cars {
+    void sound() {
+        System.out.println("BMW");
+    }
+}
+
+// Child class
+class Audi extends Cars {
+    void sound() {
+        System.out.println("Audi");
+    }
+}
+
+// Child class
+class Benz extends Cars {
+    void sound() {
+        System.out.println("Benz");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Cars a;
+        
+        a = new BMW();
+        a.sound();
+        
+        a = new Audi();
+        a.sound();
+        
+        a = new Benz();
+        a.sound();
+    }
+}
+
+//user input
+import java.util.Scanner;
+class family {
+    void show() {
+        System.out.println("family member");
+    }
+}
+
+class GrandFather extends family {
+    void show() {
+        System.out.println("grand father: " + Main.gfName);
+    }
+}
+class GrandMother extends family {
+    void show() {
+        System.out.println("Grandmother's Name: " + Main.gmName);
+    }
+}
+
+class Father extends family {
+    void show() {
+        System.out.println("Father's Name: " + Main.fName);
+    }
+}
+class Mother extends family {
+    void show() {
+        System.out.println("Mother's Name: " + Main.mName);
+    }
+}
+
+public class Main {
+    static String gfName, gmName, fName, mName;
+
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+
+        System.out.print(" grandfather name: ");
+        gfName = data.nextLine();
+
+        System.out.print("grandmother name: ");
+        gmName = data.nextLine();
+
+        System.out.print("father namw: ");
+        fName = data.nextLine();
+
+        System.out.print("mother name: ");
+        mName = data.nextLine();
+
+        family f;
+
+        f = new GrandFather();
+        f.show();
+
+        f = new GrandMother();
+        f.show();
+
+        f = new Father();
+        f.show();
+
+        f = new Mother();
+        f.show();
+
+    
+    }
+}
+
