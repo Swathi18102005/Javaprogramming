@@ -1,264 +1,303 @@
-//syntax for creating objext
-import java.util.Scanner;
-public class Main {
-        int x =5;
-        public static void main(String[] args) {
-        Main obj =new  Main();
-        System.out.println(obj.x);
-        
-    }
-}
-
-//check
-class person{
-    String n;
-    
-    public person(String n) {
-        this.n = n;
-    }
-    
-    @Override
-    public String toString() {
-        return "person{name;'" + n + "'}";
-    }
-    
-        public static void main(String[]args) {
-            
-            person p = new person("swathi");
-            
-            System.out.println(p.toString());
-        }
-}
-
 //inheritance
-// Parent class
-class Cars {
-    void sound() {
-        System.out.println("Cars make a sound");
+//parent class 
+class cars{
+    void sound(){
+        System.out.println("Cars makes a sound!");
     }
 }
 
-// Child class
-class BMW extends Cars {
-    void sound() {
+//child class 
+class BMW extends cars{
+    void sound(){
         System.out.println("BMW");
     }
 }
-
-// Child class
-class Audi extends Cars {
-    void sound() {
+class Audi extends cars{
+    void sound(){
         System.out.println("Audi");
     }
 }
-
-// Child class
-class Benz extends Cars {
-    void sound() {
+class Benz extends cars{
+    void sound(){
         System.out.println("Benz");
     }
 }
-
-// Main class
-public class Main {
-    public static void main(String[] args) {
-        Cars a;
-        
-        a = new BMW();
-        a.sound();
-        
-        a = new Audi();
-        a.sound();
-        
-        a = new Benz();
-        a.sound();
+class Supra extends cars{
+    void sound(){
+        System.out.println("Toyota Supra");
     }
 }
 
-//user input
-import java.util.Scanner;
-//parent class or base class
-class parent{
-    void name(){
-        System.out.println("Family Details");
-    }
-}
 
-//child class or sub class
-class grandpa extends parent{
-    void name(String N){
-        System.out.println("GrandFather:"
-        +N);
-    }
-}
-class grandma extends parent{
-    void name(String N){
-        System.out.println("GrandMother:"+N);
-    }
-}public class Main
+public class Main
 {
 	public static void main(String[] args) {
 	    
-	    grandpa gp= new grandpa();
+	    cars a;
+	    a= new BMW();
+	    a.sound();
+		
+	    a= new Audi();
+	    a.sound();
 	    
-	    Scanner n= new Scanner(System.in);
-	    System.out.println("Enter grandfather name:");
-	    String grandpaName=n.nextLine();
-	    gp.name(grandpaName);
-	    System.out.println("Enter grandmother name:");
-		String grandmaName=n.nextLine();
-	    grandma gm= new grandma();
-	    gm.name(grandmaName);}}
+	    a= new Benz();
+	    a.sound();
+	    
+	    a= new Supra();
+	    a.sound();
+	}
+}
+
 
 //single inheritance
-// Parent class
-class Cars {
-    void sound() {
-        System.out.println("Cars make a sound");
+//parent class 
+class parent{
+    void sound(){
+        System.out.println("Cars makes a sound!");
     }
 }
 
-// Child class
-class BMW extends Cars {
-    void sound() {
-        System.out.println("BMW");
+//child class 
+class daughter extends parent{
+    void sound(){
+        System.out.println("swathi");
     }
 }
-
-// Main class
-public class Main {
-    public static void main(String[] args) { 
-        Cars a; 
-        a = new BMW();
-        a.sound();
-    }
+public class Main
+{
+	public static void main(String[] args) {
+	    parent a;
+	    a= new daughter();
+	    a.sound();
+		
+	}
 }
 
-//multi level inheritance
-// Base class 
-class Vehicle {
-    void vehicle() {
-        System.out.println("This is a Vehical");
-    }
-}
 
-// Base class 2
-class FourWheeler extends Vehicle {
-    FourWheeler() {
-        System.out.println("This is a FourWheeler");
-    }
-}
-
-// Derived class
-class Car extends FourWheeler {
-    Car() {
-        System.out.println("This is a Car");
-    }
-}
-
-// Main class
-public class Main {
-    public static void main(String[] args) {
-        Car obj = new Car(); 
-    }
-}
-
-// user input
+//inheritance
 import java.util.Scanner;
-
-// Parent class
-class Parent {
-    String cousin1;
-
-    void cousinOne() {
-        System.out.println("Cousin: " + cousin1);
-    }
+//parent class or base class
+class parent {
+	void name() {
+		System.out.println("Family Details");
+	}
 }
 
-// Child class 
-class Child extends Parent {
-    String cousin2;
-
-    void cousinTwo() {
-        System.out.println("Cousin: " + cousin2);
-    }
+//child class or sub class
+class grandpa extends parent {
+	void name(String grandpaName) {
+		System.out.println("GrandFather:"
+		                   +grandpaName);
+	}
+}
+class grandma extends parent {
+	void name(String grandmaName) {
+		System.out.println("GrandMother:"+grandmaName);
+	}
+}
+class father extends parent {
+	void name(String fatherName) {
+		System.out.println("Father:"+fatherName);
+	}
+}
+class mother extends parent {
+	void name(String motherName) {
+		System.out.println("Mother:"
+		+motherName);
+	}
 }
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner data = new Scanner(System.in);
-
-        Child obj = new Child();
-
-        System.out.print("enter first cousin name: ");
-        obj.cousin1 = data.nextLine();
-
-        System.out.print("enter second cousin name: ");
-        obj.cousin2 = data.nextLine();
-
-        obj.cousinOne();
-        obj.cousinTwo();
-
-    }
+class sister extends parent {
+	void name(String sisterName) {
+		System.out.println("sister:"+sisterName);
+	}
 }
 
-//hierarical inheritance
-// Base class 1
-class Vehicle {
-    Vehicle() {
+class brother extends parent {
+	void name(String brotherName) {
+		System.out.println("brother:"+brotherName);
+	}
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+
+		grandpa gp= new grandpa();
+
+		Scanner n= new Scanner(System.in);
+		System.out.println("Enter grandfather name:");
+		String grandpaName=n.nextLine();
+		gp.name(grandpaName);
+
+		System.out.println("Enter grandmother name:");
+		String grandmaName=n.nextLine();
+		grandma gm= new grandma();
+		gm.name(grandmaName);
+
+		System.out.println("Enter father name:");
+		String fatherName=n.nextLine();
+		father f= new father();
+		f.name(fatherName);
+
+		System.out.println("Enter mother name:");
+		String motherName=n.nextLine();
+		mother m= new mother();
+		m.name(motherName);
+
+		System.out.println("Enter sister name:");
+		String sisterName=n.nextLine();
+		sister s= new sister();
+		s.name(sisterName);
+
+		System.out.println("Enter brother name:");
+		String brotherName=n.nextLine();
+		brother b= new brother();
+		b.name(brotherName);
+	}
+}
+
+
+//multi-level inheritance
+//parent class 
+class Vehicle{
+    void vehicle(){
         System.out.println("This is a Vehicle");
     }
 }
 
-// Derived class 1
-class Car extends Vehicle {
-    Car() {
-        System.out.println("This is a Car");
+//child class 
+class fourwheeler extends Vehicle{
+    fourwheeler(){
+        System.out.println("This is a Four wheeler");
+    }
+}
+class car extends fourwheeler{
+    car(){
+        System.out.println("This is a car");
     }
 }
 
-// Derived class 2
-class Bus extends Vehicle {
-    Bus() {
-        System.out.println("This is a Bus");
+public class Main
+{
+	public static void main(String[] args) {
+	    car a= new car();
+	    
+	
+	}
+}
+
+
+//hierarchical
+import java.util.Scanner;
+//parent class 
+class Grandparents{
+    Grandparents(){
+        System.out.println("Muthuramalingam and Jayalakshmi");
+        
     }
 }
 
-// Main class
-public class Main {
-    public static void main(String[] args) {
-        Car obj1 = new Car();
-        Vehicle obj2 = new Bus(); 
+//child class 
+class UncleAunty extends Grandparents{
+    UncleAunty(String un,String a){
+        System.out.println("Uncle and Aunty :"+un+" "+a);
+        
+    }
+}
+class Cousin extends Grandparents{
+    Cousin(String s,String t){
+        System.out.println("Cousins:"+s+" "+t);
+        
     }
 }
 
-//
-// base interface
-interface Audi {
-    default void modelofAudi() {
-        System.out.println("This is a model of Audi");
-    }
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner n= new Scanner(System.in);
+	
+		System.out.println("Enter uncle name:");
+		String un =n.nextLine();
+		System.out.println("Enter aunty name:");
+		String a =n.nextLine();
+		UncleAunty x=new UncleAunty(un,a);
+		
+		System.out.println("Enter cousin name:");
+		String s =n.nextLine();
+		System.out.println("Enter cousin name:");
+		String t =n.nextLine();
+		Cousin CC=new Cousin(s,t);
+		
+	   
+	}
 }
 
-// base interface
-interface BMW {
-    default void modelofBmw() {
+
+//mutiple inheritance
+//parent class
+interface BMW{
+    default void BMW(){
         System.out.println("This is a model of BMW");
+        
     }
 }
 
-// class implementing both interfaces
-class Car implements Audi, BMW {
-    Car() {
-        System.out.println("This is a Car");
+//child class or sub class
+interface Audi{
+    default void Audi(){
+        System.out.println("This is a model of Audi");
+        
+    }
+}
+class Car implements BMW,Audi{
+        Car(){
+        System.out.println("These are cars");
+        
     }
 }
 
-// Main class 
-public class Main {
-    public static void main(String[] args) {
-        Car obj = new Car();
-        obj.modelofAudi();
-        obj.modelofBmw();
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Car obj = new Car();
+	    obj.BMW();
+	    obj.Audi();	   
+	}
+}
+
+
+
+//parent class or base class
+interface Father{
+    default void Father(){
+        System.out.println("Rajagopal");
+        
     }
 }
+
+//child class or sub class
+interface Mother{
+    default void Mother(){
+        System.out.println("Akila");
+        
+    }
+}
+class Daughter implements Father,Mother{
+        Daughter(){
+        System.out.println("I am swathi.");
+        
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Daughter obj = new Daughter();
+	    obj.Father();
+	    obj.Mother();
+	}
+}
+
