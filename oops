@@ -77,67 +77,35 @@ public class Main {
 
 //user input
 import java.util.Scanner;
-class family {
-    void show() {
-        System.out.println("family member");
+//parent class or base class
+class parent{
+    void name(){
+        System.out.println("Family Details");
     }
 }
 
-class GrandFather extends family {
-    void show() {
-        System.out.println("grand father: " + Main.gfName);
+//child class or sub class
+class grandpa extends parent{
+    void name(String N){
+        System.out.println("GrandFather:"
+        +N);
     }
 }
-class GrandMother extends family {
-    void show() {
-        System.out.println("Grandmother's Name: " + Main.gmName);
+class grandma extends parent{
+    void name(String N){
+        System.out.println("GrandMother:"+N);
     }
-}
-
-class Father extends family {
-    void show() {
-        System.out.println("Father's Name: " + Main.fName);
-    }
-}
-class Mother extends family {
-    void show() {
-        System.out.println("Mother's Name: " + Main.mName);
-    }
-}
-
-public class Main {
-    static String gfName, gmName, fName, mName;
-
-    public static void main(String[] args) {
-        Scanner data = new Scanner(System.in);
-
-        System.out.print(" grandfather name: ");
-        gfName = data.nextLine();
-
-        System.out.print("grandmother name: ");
-        gmName = data.nextLine();
-
-        System.out.print("father namw: ");
-        fName = data.nextLine();
-
-        System.out.print("mother name: ");
-        mName = data.nextLine();
-
-        family f;
-
-        f = new GrandFather();
-        f.show();
-
-        f = new GrandMother();
-        f.show();
-
-        f = new Father();
-        f.show();
-
-        f = new Mother();
-        f.show();
-
-    
-    }
-}
-
+}public class Main
+{
+	public static void main(String[] args) {
+	    
+	    grandpa gp= new grandpa();
+	    
+	    Scanner n= new Scanner(System.in);
+	    System.out.println("Enter grandfather name:");
+	    String grandpaName=n.nextLine();
+	    gp.name(grandpaName);
+	    System.out.println("Enter grandmother name:");
+		String grandmaName=n.nextLine();
+	    grandma gm= new grandma();
+	    gm.name(grandmaName);}}
