@@ -109,3 +109,125 @@ class grandma extends parent{
 		String grandmaName=n.nextLine();
 	    grandma gm= new grandma();
 	    gm.name(grandmaName);}}
+
+//single inheritance
+// Parent class
+class Cars {
+    void sound() {
+        System.out.println("Cars make a sound");
+    }
+}
+
+// Child class
+class BMW extends Cars {
+    void sound() {
+        System.out.println("BMW");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) { 
+        Cars a; 
+        a = new BMW();
+        a.sound();
+    }
+}
+
+//multi level inheritance
+// Base class 
+class Vehicle {
+    void vehicle() {
+        System.out.println("This is a Vehical");
+    }
+}
+
+// Base class 2
+class FourWheeler extends Vehicle {
+    FourWheeler() {
+        System.out.println("This is a FourWheeler");
+    }
+}
+
+// Derived class
+class Car extends FourWheeler {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car(); 
+    }
+}
+
+// user input
+import java.util.Scanner;
+
+// Parent class
+class Parent {
+    String cousin1;
+
+    void cousinOne() {
+        System.out.println("Cousin: " + cousin1);
+    }
+}
+
+// Child class 
+class Child extends Parent {
+    String cousin2;
+
+    void cousinTwo() {
+        System.out.println("Cousin: " + cousin2);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+
+        Child obj = new Child();
+
+        System.out.print("enter first cousin name: ");
+        obj.cousin1 = data.nextLine();
+
+        System.out.print("enter second cousin name: ");
+        obj.cousin2 = data.nextLine();
+
+        obj.cousinOne();
+        obj.cousinTwo();
+
+    }
+}
+
+//hierarical inheritance
+// Base class 1
+class Vehicle {
+    Vehicle() {
+        System.out.println("This is a Vehicle");
+    }
+}
+
+// Derived class 1
+class Car extends Vehicle {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+
+// Derived class 2
+class Bus extends Vehicle {
+    Bus() {
+        System.out.println("This is a Bus");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Car obj1 = new Car();
+        Vehicle obj2 = new Bus(); 
+    }
+}
