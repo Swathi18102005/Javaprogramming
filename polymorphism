@@ -74,3 +74,60 @@ public class Main
 	    
 	}
 }
+
+//
+public class Main {
+    public static void main(String[] args) {
+        int i = 1;
+        int j = i++ + ++i; 
+
+        System.out.println("i: " + i);
+        System.out.println("j: " + j);
+    }
+}
+
+//employee salary overriding
+class Employee {
+    public void salary() {
+        System.out.println("employee salary");
+    }
+}
+
+class Manager extends Employee {
+    @Override
+    public void salary() {
+        System.out.println("person1 salary: 80,000");
+    }
+}
+
+class Developer extends Employee {
+    @Override
+    public void salary() {
+        System.out.println("person2 salary: 60,000");
+    }
+}
+
+class Intern extends Employee {
+    @Override
+    public void salary() {
+        System.out.println("person3 salary: 20,000");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e;
+
+        e = new Manager();   
+        e.salary();
+
+        e = new Developer();
+        e.salary();
+
+        e = new Intern();
+        e.salary();
+
+        e = new Employee();
+        e.salary();
+    }
+}
